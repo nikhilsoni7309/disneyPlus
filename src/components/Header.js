@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useNavigate } from "react-router-dom";//usenavigation
+import { useNavigate } from "react-router-dom";//usenavigation
 import { auth, provider } from "../firebase";
 import { signInWithPopup,signOut } from "firebase/auth";
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
@@ -106,7 +106,6 @@ const Header = (props) => {
                     <span onClick={handleAuth}>Sign out</span>
                 </DropDown>
             </SignOut>
-            <UserImg src={userPhoto} alt={userName}/>
             </>
         )}
        </Nav>
@@ -188,7 +187,7 @@ const NavMenu = styled.div`
             right: 0px;
             transform-origin: left center;
             transform: scaleX(0);
-            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
             visibility: hidden;
             width: auto;
         }
@@ -203,9 +202,9 @@ const NavMenu = styled.div`
     }
 }  
   
-  /* @media (max-width: 768px) {
+   @media (max-width: 768px) {
     display: none;
-  } */
+  } 
 `;
 
 const Login = styled.a`
@@ -235,8 +234,8 @@ const DropDown = styled.div`
   background: rgb(19, 19, 19);
   border: 1px solid rgba(151, 151, 151, 0.34);
   border-radius: 4px;
-  box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px;
-  padding: 10px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
+  padding: 8px;
   font-size: 14px;
   letter-spacing: 3px;
   width: 100px;

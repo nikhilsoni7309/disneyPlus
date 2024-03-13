@@ -59,15 +59,17 @@ const CTA = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
+  justify-content: center;
 `
 
 const CTALogoOne = styled.img`
   margin-bottom: 12px;
-  max-width: 600px;
+  max-width: 550px;
   min-height: 1px;
   display: block;
   width: 100%;
+  margin-top: 0;
 `;
 
 const SignUp = styled.a`
@@ -78,9 +80,10 @@ const SignUp = styled.a`
   width: 100%;
   letter-spacing: 1.5px;
   font-size: 18px;
-  padding: 16.5px 0;
+  padding: 13.5px 0;
   border: 1px solid transparent;
   border-radius: 4px;
+  cursor: pointer;
 
   &:hover {
     background-color: #0483ee;
@@ -88,8 +91,8 @@ const SignUp = styled.a`
 `;
 
 const Description = styled.p`
-  color: hsla(0, 01, 95.31, 1);
-  font-size: 11px;
+  color: hsla(0, 0%, 95.3%, 1);
+  font-size: 12px;
   margin: 0 0 24px;
   line-height: 1.5;
   letter-spacing: 1.5px;

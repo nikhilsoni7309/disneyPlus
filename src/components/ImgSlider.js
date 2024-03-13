@@ -59,7 +59,7 @@ const Carousel = styled(Slider)`
   ul li button {
     &:before {
         font-size: 10px;
-        color: rgb(150, 158, 171);
+        color: rgb(150, 150, 171);
     }
   }
 
@@ -97,6 +97,11 @@ const Wrap = styled.div`
     img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+
+        @media (max-width: 450px){
+          width: 130%
+        }
     }
 
     &:hover {
